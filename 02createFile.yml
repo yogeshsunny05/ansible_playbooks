@@ -1,8 +1,12 @@
 ---
-- hosts: appServers
+- hosts : all
+
   tasks:
-   - name: Create a file
-     file:
-      path: /tmp/yogesh.txt 
-      state: touch
+  - name: creating the file
+    file:
+    path: /tmp/yogesh.yaml
+    owner: root
+    group: root
+    mode: 0777
+    state: touch
 ...
